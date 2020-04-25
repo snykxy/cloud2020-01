@@ -1,0 +1,21 @@
+server:
+  port: 9001
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone:
+        http://eureka7001:7001/eureka,http://eureka7002:7002/eureka
+  instance:
+    appname: order9001
+
+
+spring:
+  application:
+    name: springcloud-consumer-order
+
+ribbon:
+  ReadTimeout: 5000 #连接超时
+  ConnectTimeout: 5000  #响应超时
